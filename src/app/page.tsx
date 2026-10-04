@@ -30,15 +30,245 @@ export default function Home() {
 
       <section className="hero section-wrap" id="top">
         <div className="hero-copy">
-          <motion.div className="eyebrow" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}><Radio size={13} /> AI / ML / SOFTWARE ENGINEER <span className="eyebrow-rule" /> AVAILABLE NOW</motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12, duration: 0.7 }}>ADVAIT<br /><em>PARAB</em></motion.h1>
-          <motion.p className="hero-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.7 }}>I build intelligent software systems where research-grade thinking meets reliable, human-scale products.</motion.p>
-          <motion.div className="hero-actions" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.5 }}>
-            <a className="hero-button hero-button-primary" href="#work">EXPLORE WORK <ArrowUpRight size={15} /></a>
-            <a className="hero-button hero-button-secondary" href="/resume.pdf"><Download size={14} /> RESUME</a>
+          <motion.div
+            className="eyebrow"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Radio size={13} />
+            AI / ML / SOFTWARE ENGINEER
+            <span className="eyebrow-rule" />
+            BUILDING & RESEARCHING
           </motion.div>
-          <motion.div className="hero-socials" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.58 }}>
-            <span>CONNECT</span><a href="https://github.com/advaitparab" target="_blank" rel="noreferrer" aria-label="Advait Parab on GitHub"><Code2 size={16} /></a><a href="https://www.linkedin.com/in/advaitparab/" target="_blank" rel="noreferrer" aria-label="Advait Parab on LinkedIn"><BriefcaseBusiness size={16} /></a>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.12, duration: 0.7 }}
+          >
+            ADVAIT
+            <br />
+            <em>PARAB</em>
+          </motion.h1>
+
+          <motion.p
+            className="hero-intro"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+          >
+            I build intelligent systems across machine learning, computer
+            vision, LLMs, and applied research.
+          </motion.p>
+
+          <motion.div
+            className="hero-actions"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45, duration: 0.5 }}
+            style={{
+              display: "flex",
+              gap: "14px",
+              marginTop: "32px",
+              alignItems: "center",
+            }}
+          >
+            <a
+              href="#work"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "14px",
+                minWidth: "190px",
+                height: "56px",
+                padding: "0 18px",
+                background: "#f5f5f5",
+                color: "#090909",
+                textDecoration: "none",
+                border: "1px solid #f5f5f5",
+                transition: "all 0.3s ease",
+                fontSize: "11px",
+                fontWeight: 600,
+                letterSpacing: "0.14em",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px)";
+                e.currentTarget.style.background = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.background = "#f5f5f5";
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "monospace",
+                  fontSize: "10px",
+                  opacity: 0.45,
+                }}
+              >
+                01
+              </span>
+
+              <span style={{ flex: 1 }}>EXPLORE WORK</span>
+
+              <ArrowUpRight size={16} />
+            </a>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "14px",
+                minWidth: "190px",
+                height: "56px",
+                padding: "0 18px",
+                background: "transparent",
+                color: "rgba(255,255,255,0.75)",
+                textDecoration: "none",
+                border: "1px solid rgba(255,255,255,0.16)",
+                transition: "all 0.3s ease",
+                fontSize: "11px",
+                fontWeight: 600,
+                letterSpacing: "0.14em",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px)";
+                e.currentTarget.style.color = "#ffffff";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.4)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.04)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.color = "rgba(255,255,255,0.75)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.16)";
+                e.currentTarget.style.background = "transparent";
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "monospace",
+                  fontSize: "10px",
+                  opacity: 0.45,
+                }}
+              >
+                02
+              </span>
+
+              <span style={{ flex: 1 }}>VIEW RESUME</span>
+
+              <Download size={15} />
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="hero-socials"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.58 }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+              marginTop: "28px",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "10px",
+                fontWeight: 600,
+                letterSpacing: "0.18em",
+                color: "rgba(255,255,255,0.42)",
+                marginRight: "6px",
+              }}
+            >
+              CONNECT
+            </span>
+
+            <span
+              style={{
+                width: "32px",
+                height: "1px",
+                background: "rgba(255,255,255,0.16)",
+                marginRight: "4px",
+              }}
+            />
+
+            <a
+              href="https://github.com/Acsel28"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Advait Parab on GitHub"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "7px",
+                padding: "8px 11px",
+                color: "rgba(255,255,255,0.65)",
+                border: "1px solid rgba(255,255,255,0.1)",
+                background: "rgba(255,255,255,0.025)",
+                textDecoration: "none",
+                fontSize: "10px",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                transition: "all 0.25s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#ffffff";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.07)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "rgba(255,255,255,0.65)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.025)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              <Code2 size={14} />
+              GITHUB
+            </a>
+
+            <a
+              href="https://linkedin.com/in/advait-parab-22001b291"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Advait Parab on LinkedIn"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "7px",
+                padding: "8px 11px",
+                color: "rgba(255,255,255,0.65)",
+                border: "1px solid rgba(255,255,255,0.1)",
+                background: "rgba(255,255,255,0.025)",
+                textDecoration: "none",
+                fontSize: "10px",
+                fontWeight: 600,
+                letterSpacing: "0.1em",
+                transition: "all 0.25s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "#ffffff";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.07)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "rgba(255,255,255,0.65)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.025)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              <BriefcaseBusiness size={14} />
+              LINKEDIN
+            </a>
           </motion.div>
         </div>
 
