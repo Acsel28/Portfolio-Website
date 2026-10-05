@@ -7,8 +7,12 @@ import { retrieveAssistantAnswer, type AssistantResult } from "@/data/assistant"
 import styles from "./AskAdvait.module.css";
 
 type Message = { id: number; role: "assistant" | "user"; text: string; result?: AssistantResult };
-
-const suggestions = ["What did Advait build for terrain perception?", "How does TerrainAI switch models?", "What is Atria?", "Where did he intern?"];
+const suggestions = [
+  "What did Advait build for terrain perception?",
+  "How does TerrainAI switch models?",
+  "What ML work has Advait done?",
+  "Where did he intern?",
+];
 
 export default function AskAdvait() {
   const [query, setQuery] = useState("");
@@ -26,7 +30,24 @@ export default function AskAdvait() {
   }
 
   function askSuggestion(suggestion: string) {
-    setQuery(suggestion);
+    const result = retrieveAssistantAnswer(suggestion);
+
+    setMessages((current) => [
+      ...current,
+      {
+        id: messageId,
+        role: "user",
+        text: suggestion,
+      },
+      {
+        id: messageId + 1,
+        role: "assistant",
+        text: result.answer,
+        result,
+      },
+    ]);
+
+    setMessageId((current) => current + 2);
   }
 
   return <section className={styles.ask} id="ask" aria-labelledby="ask-title">
